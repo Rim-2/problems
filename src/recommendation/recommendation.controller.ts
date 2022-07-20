@@ -15,9 +15,7 @@ export class RecommendationController {
   }
 
   // 날씨에 따른 술 추천
-  @Get('/weather/:id')
-  @ApiOperation({ summary: '날씨에 따른 술 추천 API', description: '날씨에 따른 술 추천' })
-  @ApiCreatedResponse({ description: '날씨에 따른 술 추천' })
+  @Get('/weather/:id') // 태그 
   getWeatherRecommendation(@Param('id') id: string) {
     return this.recommendationService.getWeatherRecommendation(id);
   }
